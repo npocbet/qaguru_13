@@ -1,22 +1,27 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.link;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class VacancyTests extends TestBase {
     @Test
-    @Description("test tries to find some QA vacancies on Ozon")
+    @Description("Test tries to find some QA vacancies on Ozon")
     @DisplayName("Ozon has some QA vacancies")
-    void generatedTest() {
+    void qaVacancyAvailableTest() {
         step("Open https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0", () -> {
             open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0");
         });
@@ -33,6 +38,118 @@ public class VacancyTests extends TestBase {
 
                 assertThat(number_of_vacancies).isGreaterThan(1);
             });
+        });
+    }
+
+    @Test
+    @Description("checking internship route response")
+    @DisplayName("Internship scenario response")
+    void internshipRouteResponseTest(){
+        step("Open https://job.ozon.ru/", () -> {
+            open("https://job.ozon.ru/");
+        });
+
+        sleep(3000);
+        step("Select city St-Petersburg", () -> {
+            $("[placeholder=\"Город\"]").click();
+            $$(".select__list__item").filterBy(text("Санкт-Петербург")).first().click();
+            $(byText("Сохранить")).click();
+        });
+
+        step("going to internships page", () -> {
+            $("[href=\"/internships/\"]").click();
+        });
+
+        step("click wanna be with you", () -> {
+            $(".about__top__text .button.button.button-regular.button-normal").click();
+        });
+
+        sleep(1000);
+
+        step("pick the firstt vacancy", () -> {
+            $(".results__items .wr").click();
+        });
+
+        step("respond on vacancy", () -> {
+            Selenide.switchTo().window(1);
+            $(".vacancy .vacancy__actions__apply").click();
+        });
+
+        step("enter some test values", () -> {
+            $("input[name=\"lname\"]").setValue("Test");
+            $("input[name=\"fname\"]").setValue("Test");
+            $("input[name=\"email\"]").setValue("test@test.test");
+            $("input[type=\"tel\"]").setValue("+79207007070");
+            $("input[type=\"file\"]").uploadFromClasspath("doc/test.pdf");
+            $(".agree .checkbox").click();
+            $(".button.confirm").click();
+            $(".modal button").click();
+            $(".button.confirm").click();
+            $("#__layout .sent h4").shouldHave(text("Спасибо!"));
+        });
+    }
+
+    @Test
+    @Description("checking internship route sharelink")
+    @DisplayName("Internship scenario sharelink")
+    void internshipRouteShareLinkTest(){
+        step("Open https://job.ozon.ru/", () -> {
+            open("https://job.ozon.ru/");
+        });
+
+        sleep(3000);
+        step("Select city St-Petersburg", () -> {
+            $("[placeholder=\"Город\"]").click();
+            $$(".select__list__item").filterBy(text("Санкт-Петербург")).first().click();
+            $(byText("Сохранить")).click();
+        });
+
+        step("going to internships page", () -> {
+            $("[href=\"/internships/\"]").click();
+        });
+
+        step("click wanna be with you", () -> {
+            $(".about__top__text .button.button.button-regular.button-normal").click();
+        });
+
+        sleep(1000);
+
+        step("pick the firstt vacancy", () -> {
+            $(".results__items .wr").click();
+        });
+
+        step("share on vacancy link", () -> {
+            Selenide.switchTo().window(1);
+            $(".vacancy .vacancy__actions__share").click();
+        });
+
+        // todo добоавить проверку "ссылка успешно скопирована"
+        sleep(3000);
+
+
+    }
+
+    @Test
+    @Description("Simple test")
+    @DisplayName("Page should have links to social network pages")
+    void socialNetworkLinksTest() {
+        step("Open url 'https://job.ozon.ru/", () ->
+            open("https://job.ozon.ru/"));
+
+        step("close modal window", () -> {
+            $(".modal__content .close").click();
+        });
+
+        step("Page menu should have correct link on vk.com", () -> {
+            $$(".info__socials a").find(Condition.href("https://vk.com/ozon")).click();
+        });
+
+        step("Page menu should have correct link on fb.com", () -> {
+            $$(".info__socials a").find(Condition.href("https://www.facebook.com/ozon.ru/")).click();
+        });
+
+        step("Page menu should have correct link on instagram.com", () -> {
+            $$(".info__socials a").find(Condition.href("https://www.instagram.com/ozonru/")).click();
         });
     }
 
