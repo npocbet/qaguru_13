@@ -123,10 +123,9 @@ public class VacancyTests extends TestBase {
             $(".vacancy .vacancy__actions__share").click();
         });
 
-        // todo добоавить проверку "ссылка успешно скопирована"
-        sleep(3000);
-
-
+        step("message should be ссылка скопирована", () -> {
+            $(".vacancy .tooltip").shouldHave(text("Ссылка успешно скопирована!"));
+        });
     }
 
     @Test
