@@ -1,12 +1,12 @@
 # The test automation project for
 <a target="_blank" href="https://job.ozon.ru/">OZON job</a>
 
-# The project is done with the following technologies:
+## The project is done with the following technologies:
 
-# Jenkins job
+## Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/09-npocbet_hw_13/">jenkins.autotests.cloud/job/</a>
 
-# Technology stack:
+## Technology stack:
 <a href="https://pikabu.ru/story/vyi_prinyatyi_na_rabotu_8642670?utm_source=linkshare&utm_medium=sharing">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40" height="40"  alt="Java"/>
 </a>
@@ -36,7 +36,7 @@
     <img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
 </a>
 
-### Test & Release management:
+## Test & Release management:
 
 <a href="https://www.jetbrains.com/idea/">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure TestOps"/>
@@ -46,7 +46,7 @@
     <img src="https://starchenkov.pro/qa-guru/img/skills/Jira.svg" width="40" height="40"  alt="Jira"/>
 </a>
 
-# USAGE examples
+## USAGE examples
 
 ### For run remote tests need fill remote.properties or to pass value:
 
