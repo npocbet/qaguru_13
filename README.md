@@ -1,5 +1,5 @@
 # The test automation project for
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">ITFinland website%s</a> (ask admin@qa.guru for access)
+<a target="_blank" href="https://job.ozon.ru/%s">OZON job</a>
 
 # Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
