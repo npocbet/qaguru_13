@@ -1,5 +1,5 @@
 # The test automation project for
-<a target="_blank" href="https://job.ozon.ru/%s">OZON job</a>
+<a target="_blank" href="https://job.ozon.ru/">OZON job</a>
 
 # Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
