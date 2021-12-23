@@ -28,7 +28,24 @@
 <a href="https://www.jetbrains.com/idea/">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
 </a>
- 
+# Infrastructure:
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
+</a>
+
+### Test & Release management:
+
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure TestOps"/>
+</a>
+
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Jira.svg" width="40" height="40"  alt="Jira"/>
+</a>
+
 # USAGE examples
 
 ### For run remote tests need fill remote.properties or to pass value:
