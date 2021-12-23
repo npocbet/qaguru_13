@@ -1,4 +1,4 @@
-# The test automation project for
+# The test automation project for JOB.OZON.RU
 <a target="_blank" href="https://job.ozon.ru/">OZON job</a>
 
 ## The project is done with the following technologies:
