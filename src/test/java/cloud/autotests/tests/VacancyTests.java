@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.link;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class VacancyTests extends TestBase {
@@ -45,7 +46,7 @@ public class VacancyTests extends TestBase {
     @Test
     @Description("checking internship route response")
     @DisplayName("Internship scenario response")
-    @Disabled("unstable")
+    // @Disabled("unstable")
     void internshipRouteResponseTest(){
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");
@@ -84,15 +85,20 @@ public class VacancyTests extends TestBase {
             $("input[type=\"tel\"]").setValue("+79207007070");
             $("input[type=\"file\"]").uploadFromClasspath("doc/test.pdf");
             $(".agree .checkbox").click();
-            sleep(3000);
-            $(".button.confirm").click();
-            sleep(3000);
-            $(".modal button").click();
-            sleep(3000);
-            $(".button.confirm").click();
-//            $(".modal button").click();
-//            $(".button.confirm").click();
-            $("#__layout .sent h4").shouldHave(text("Спасибо!"));
+            try {
+                $(".button.confirm").click();
+                sleep(3000);
+                while ($$(".modal button").size() != 0){
+                    sleep(3000);
+                    $(".modal button").click();
+                    sleep(3000);
+                    $(".button.confirm").click();
+                }
+            }
+            finally {
+                $("#__layout .sent h4").shouldHave(text("Спасибо!"));
+            }
+
         });
     }
 

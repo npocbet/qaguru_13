@@ -82,3 +82,103 @@ gradle clean demowebshop
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+
+## Results analysis
+
+The test results can be found in:
++ [Jenkins](#jenkins)
++ [Allure Report](#allure-report)
++ [Allure TestOps](#allure-testOps)
++ [Jira](#jira)
+
+
+### [Jenkins](https://jenkins.autotests.cloud/job/09-npocbet_hw_13/)
+
+For the running autotests in Jenkins, you can specify the parameters described
+in :point_up:  [Run tests without filled remote properties](#run-tests-without-filled-remote-properties).
+
+After selecting the necessary parameters, you need to click the Submit (Собрать) button.
+
+<p align="center">
+  <img src="images/screens/Jenkins_parameters.PNG">
+</p>
+
+Once the launch is finished you may watch statistics and open the `Allure Report` <img width="2%" title="Allure Report" src="images/logo/Allure_Report_icon.svg">
+
+<p align="center">
+  <img src="images/screens/Jenkins_statistic.PNG">
+</p>
+
+### Allure Report
+
+Here are the examples of a report about test build with grouping by tags (:
+point_up: [The list of tests grouped by tag parameter](#the-list-of-tests-grouped-by-tag-parameter))
+
+:
+arrow_right: [The launch with results for tag = main_page](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/32/allure/)
+
+<p align="center">
+  <img src="images/screens/Allure_results_2.PNG">
+</p>
+
+:arrow_right: [The launch with results for tag = top_menu](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/33/allure/)
+
+<p align="center">
+  <img src="images/screens/Allure_results_1.PNG">
+</p>
+
+### Allure TestOps
+
+Allure TestOps is used as a storage for all tests cases (automated and manual), launches, their results. You may watch statistic and reports by all launches and results
+
+:arrow_right: Dashboard:
+
+<p align="center">
+  <img src="images/screens/Allure_TestOps_dashboard.PNG">
+</p>
+
+:arrow_right: List of launches:
+
+<p align="center">
+  <img src="images/screens/Allure_TestOps_launches.PNG">
+</p>
+
+:arrow_right: List of tests grouped by features and their history of launches:
+
+<p align="center">
+  <img src="images/screens/Allure_TestOps_test_cases.PNG">
+</p>
+
+### Jira
+
+Also Jira integration is implemented in the project:
+
+<p align="center">
+  <img src="images/screens/Jira.PNG">
+</p>
+
+
+___
+
+## Example of video with test running in Allure Report
+
+You may see the example of a video showing the test run in Allure report.
+
+<p align="center">
+  <img src="images/screens/Test_video_example.gif">
+</p>
+
+
+___
+
+## Notifications in Telegram channel
+
+The project is configured to send notifications about the results of launches from Jenkins to Telegram channel
+
+<p align="center">
+  <img src="images/screens/Telegram_failed_notification.PNG">
+</p>
+
+<p align="center">
+  <img src="images/screens/Telegram_passed_notification.PNG">
+</p>
