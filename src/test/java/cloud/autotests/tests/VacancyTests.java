@@ -5,6 +5,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Description;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -44,6 +45,7 @@ public class VacancyTests extends TestBase {
     @Test
     @Description("checking internship route response")
     @DisplayName("Internship scenario response")
+    @Disabled("unstable")
     void internshipRouteResponseTest(){
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");
@@ -76,15 +78,20 @@ public class VacancyTests extends TestBase {
         });
 
         step("enter some test values", () -> {
-            $("input[name=\"lname\"]").setValue("Test");
-            $("input[name=\"fname\"]").setValue("Test");
-            $("input[name=\"email\"]").setValue("test@test.test");
+            $("input[name=\"lname\"]").setValue("Кравц");
+            $("input[name=\"fname\"]").setValue("Свято");
+            $("input[name=\"email\"]").setValue("poco@mail.ru");
             $("input[type=\"tel\"]").setValue("+79207007070");
             $("input[type=\"file\"]").uploadFromClasspath("doc/test.pdf");
             $(".agree .checkbox").click();
+            sleep(3000);
             $(".button.confirm").click();
+            sleep(3000);
             $(".modal button").click();
+            sleep(3000);
             $(".button.confirm").click();
+//            $(".modal button").click();
+//            $(".button.confirm").click();
             $("#__layout .sent h4").shouldHave(text("Спасибо!"));
         });
     }
