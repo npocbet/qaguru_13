@@ -2,11 +2,6 @@
 <a target="_blank" href="https://job.ozon.ru/">OZON job</a>
 
 ## The project is done with the following technologies:
-
-## Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/09-npocbet_hw_13/">jenkins.autotests.cloud/job/</a>
-
-## Technology stack:
 <a href="https://pikabu.ru/story/vyi_prinyatyi_na_rabotu_8642670?utm_source=linkshare&utm_medium=sharing">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40" height="40"  alt="Java"/>
 </a>
@@ -28,7 +23,11 @@
 <a href="https://www.jetbrains.com/idea/">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
 </a>
-# Infrastructure:
+
+## Jenkins job
+<a target="_blank" href="https://jenkins.autotests.cloud/job/09-npocbet_hw_13/">jenkins.autotests.cloud/job/</a>
+
+## Infrastructure:
 <a href="https://www.jetbrains.com/idea/">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
 </a>
