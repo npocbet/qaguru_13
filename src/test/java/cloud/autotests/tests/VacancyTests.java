@@ -46,7 +46,6 @@ public class VacancyTests extends TestBase {
     @Test
     @Description("checking internship route response")
     @DisplayName("Internship scenario response")
-    // @Disabled("unstable")
     void internshipRouteResponseTest(){
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");

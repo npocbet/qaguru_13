@@ -100,13 +100,13 @@ in :point_up:  [Run tests without filled remote properties](#run-tests-without-f
 After selecting the necessary parameters, you need to click the Submit (Собрать) button.
 
 <p align="center">
-  <img src="images/screens/Jenkins_parameters.PNG">
+  <img src="media/screenshots/jenkins 1.png">
 </p>
 
 Once the launch is finished you may watch statistics and open the `Allure Report` <img width="2%" title="Allure Report" src="images/logo/Allure_Report_icon.svg">
 
 <p align="center">
-  <img src="images/screens/Jenkins_statistic.PNG">
+  <img src="media/screenshots/jenkins 2.png">
 </p>
 
 ### Allure Report
@@ -118,13 +118,13 @@ point_up: [The list of tests grouped by tag parameter](#the-list-of-tests-groupe
 arrow_right: [The launch with results for tag = main_page](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/32/allure/)
 
 <p align="center">
-  <img src="images/screens/Allure_results_2.PNG">
+  <img src="media/screenshots/allure 1.png">
 </p>
 
 :arrow_right: [The launch with results for tag = top_menu](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/33/allure/)
 
 <p align="center">
-  <img src="images/screens/Allure_results_1.PNG">
+  <img src="media/screenshots/allure 2.png">
 </p>
 
 ### Allure TestOps
@@ -134,7 +134,7 @@ Allure TestOps is used as a storage for all tests cases (automated and manual), 
 :arrow_right: Dashboard:
 
 <p align="center">
-  <img src="images/screens/Allure_TestOps_dashboard.PNG">
+  <img src="media/screenshots/allure 3.png">
 </p>
 
 :arrow_right: List of launches:
