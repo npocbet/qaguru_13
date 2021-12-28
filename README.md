@@ -121,12 +121,6 @@ arrow_right: [The launch with results for tag = main_page](https://jenkins.autot
   <img src="media/screenshots/allure 1.png">
 </p>
 
-:arrow_right: [The launch with results for tag = top_menu](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/33/allure/)
-
-<p align="center">
-  <img src="media/screenshots/allure 2.png">
-</p>
-
 ### Allure TestOps
 
 Allure TestOps is used as a storage for all tests cases (automated and manual), launches, their results. You may watch statistic and reports by all launches and results
@@ -134,13 +128,13 @@ Allure TestOps is used as a storage for all tests cases (automated and manual), 
 :arrow_right: Dashboard:
 
 <p align="center">
-  <img src="media/screenshots/allure 3.png">
+  <img src="media/screenshots/allure 2.png">
 </p>
 
 :arrow_right: List of launches:
 
 <p align="center">
-  <img src="images/screens/Allure_TestOps_launches.PNG">
+  <img src="media/screenshots/allure 3.png">
 </p>
 
 :arrow_right: List of tests grouped by features and their history of launches:
@@ -154,7 +148,7 @@ Allure TestOps is used as a storage for all tests cases (automated and manual), 
 Also Jira integration is implemented in the project:
 
 <p align="center">
-  <img src="images/screens/Jira.PNG">
+  <img src="media/screenshots/jira.png">
 </p>
 
 
@@ -165,7 +159,7 @@ ___
 You may see the example of a video showing the test run in Allure report.
 
 <p align="center">
-  <img src="images/screens/Test_video_example.gif">
+  <img src="media/screenshots/allure-video.gif">
 </p>
 
 
@@ -176,9 +170,9 @@ ___
 The project is configured to send notifications about the results of launches from Jenkins to Telegram channel
 
 <p align="center">
-  <img src="images/screens/Telegram_failed_notification.PNG">
+  <img src="media/screenshots/telegram 1.png">
 </p>
 
 <p align="center">
-  <img src="images/screens/Telegram_passed_notification.PNG">
+  <img src="media/screenshots/telegram 2.png">
 </p>
