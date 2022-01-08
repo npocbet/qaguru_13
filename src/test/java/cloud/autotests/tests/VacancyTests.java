@@ -1,9 +1,7 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -24,6 +22,8 @@ public class VacancyTests extends TestBase {
     @Description("Test tries to find some QA vacancies on Ozon")
     @DisplayName("Ozon has some QA vacancies")
     void qaVacancyAvailableTest() {
+        Configuration.browser = Browsers.FIREFOX;
+
         step("Open https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0", () -> {
             open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0");
         });
@@ -47,11 +47,13 @@ public class VacancyTests extends TestBase {
     @Description("checking internship route response")
     @DisplayName("Internship scenario response")
     void internshipRouteResponseTest(){
+        Configuration.browser = Browsers.FIREFOX;
+        Configuration.timeout = 7000;
+
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");
         });
 
-        sleep(3000);
         step("Select city St-Petersburg", () -> {
             $("[placeholder=\"Город\"]").click();
             $$(".select__list__item").filterBy(text("Санкт-Петербург")).first().click();
@@ -65,8 +67,6 @@ public class VacancyTests extends TestBase {
         step("click wanna be with you", () -> {
             $(".about__top__text .button.button.button-regular.button-normal").click();
         });
-
-        sleep(1000);
 
         step("pick the firstt vacancy", () -> {
             $(".results__items .wr").click();
@@ -86,11 +86,8 @@ public class VacancyTests extends TestBase {
             $(".agree .checkbox").click();
             try {
                 $(".button.confirm").click();
-                sleep(3000);
                 while ($$(".modal button").size() != 0){
-                    sleep(3000);
                     $(".modal button").click();
-                    sleep(3000);
                     $(".button.confirm").click();
                 }
             }
@@ -105,11 +102,13 @@ public class VacancyTests extends TestBase {
     @Description("checking internship route sharelink")
     @DisplayName("Internship scenario sharelink")
     void internshipRouteShareLinkTest(){
+        Configuration.browser = Browsers.FIREFOX;
+        Configuration.timeout = 7000;
+
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");
         });
 
-        sleep(3000);
         step("Select city St-Petersburg", () -> {
             $("[placeholder=\"Город\"]").click();
             $$(".select__list__item").filterBy(text("Санкт-Петербург")).first().click();
@@ -123,8 +122,6 @@ public class VacancyTests extends TestBase {
         step("click wanna be with you", () -> {
             $(".about__top__text .button.button.button-regular.button-normal").click();
         });
-
-        sleep(1000);
 
         step("pick the firstt vacancy", () -> {
             $(".results__items .wr").click();
@@ -144,6 +141,7 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page should have links to social network pages")
     void socialNetworkLinksTest() {
+        Configuration.browser = Browsers.FIREFOX;
         step("Open url 'https://job.ozon.ru/", () ->
             open("https://job.ozon.ru/"));
 
@@ -168,13 +166,15 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page title should have header text")
     void titleTest() {
-        step("Open url 'https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0'", () ->
-            open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0"));
+        Configuration.browser = Browsers.FIREFOX;
+        step("Open url 'https://job.ozon.ru/vacancy/'", () ->
+            open("https://job.ozon.ru/vacancy/"));
 
         step("Page title should have text 'Вакансии компании Ozon – Работа в Ozon'", () -> {
             String expectedTitle = "Вакансии компании Ozon – Работа в Ozon";
             String actualTitle = title();
 
+            System.out.println(actualTitle + '\n' + expectedTitle);
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
     }
@@ -183,6 +183,7 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
+        Configuration.browser = Browsers.FIREFOX;
         step("Open url 'https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0'", () ->
             open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0"));
 
