@@ -24,8 +24,8 @@ public class VacancyTests extends TestBase {
     @DisplayName("Ozon has some QA vacancies")
     void qaVacancyAvailableTest() {
 
-        step("Open https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0", () -> {
-            open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0");
+        step("Open /vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0", () -> {
+            open("/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0");
         });
 
         step("Select city St-Petersburg", () -> {
@@ -49,7 +49,7 @@ public class VacancyTests extends TestBase {
     void internshipRouteResponseTest(){
 
         step("Open https://job.ozon.ru/", () -> {
-            open("https://job.ozon.ru/");
+            open("/");
         });
 
         step("Select city St-Petersburg", () -> {
@@ -102,7 +102,7 @@ public class VacancyTests extends TestBase {
     void internshipRouteShareLinkTest(){
 
         step("Open https://job.ozon.ru/", () -> {
-            open("https://job.ozon.ru/");
+            open("/");
         });
 
         step("Select city St-Petersburg", () -> {
@@ -138,7 +138,7 @@ public class VacancyTests extends TestBase {
     @DisplayName("Page should have links to social network pages")
     void socialNetworkLinksTest() {
         step("Open url 'https://job.ozon.ru/", () ->
-            open("https://job.ozon.ru/"));
+            open("/"));
 
         step("close modal window", () -> {
             $(".modal__content .close").click();
@@ -161,8 +161,8 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page title should have header text")
     void titleTest() {
-        step("Open url 'https://job.ozon.ru/vacancy/'", () ->
-            open("https://job.ozon.ru/vacancy/"));
+        step("Open url '/vacancy/'", () ->
+            open("/vacancy/"));
 
         step("Page title should have text 'Вакансии компании Ozon – Работа в Ozon'", () -> {
             String expectedTitle = "Вакансии компании Ozon – Работа в Ozon";
@@ -177,8 +177,8 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        step("Open url 'https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0'", () ->
-            open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0"));
+        step("Open url '/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0'", () ->
+            open("/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
