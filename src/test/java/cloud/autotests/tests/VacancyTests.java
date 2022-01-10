@@ -18,11 +18,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class VacancyTests extends TestBase {
+
+
+
+
     @Test
     @Description("Test tries to find some QA vacancies on Ozon")
     @DisplayName("Ozon has some QA vacancies")
     void qaVacancyAvailableTest() {
-        Configuration.browser = Browsers.FIREFOX;
 
         step("Open https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0", () -> {
             open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0");
@@ -47,8 +50,6 @@ public class VacancyTests extends TestBase {
     @Description("checking internship route response")
     @DisplayName("Internship scenario response")
     void internshipRouteResponseTest(){
-        Configuration.browser = Browsers.FIREFOX;
-        Configuration.timeout = 7000;
 
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");
@@ -102,8 +103,6 @@ public class VacancyTests extends TestBase {
     @Description("checking internship route sharelink")
     @DisplayName("Internship scenario sharelink")
     void internshipRouteShareLinkTest(){
-        Configuration.browser = Browsers.FIREFOX;
-        Configuration.timeout = 7000;
 
         step("Open https://job.ozon.ru/", () -> {
             open("https://job.ozon.ru/");
@@ -141,7 +140,6 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page should have links to social network pages")
     void socialNetworkLinksTest() {
-        Configuration.browser = Browsers.FIREFOX;
         step("Open url 'https://job.ozon.ru/", () ->
             open("https://job.ozon.ru/"));
 
@@ -166,7 +164,6 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page title should have header text")
     void titleTest() {
-        Configuration.browser = Browsers.FIREFOX;
         step("Open url 'https://job.ozon.ru/vacancy/'", () ->
             open("https://job.ozon.ru/vacancy/"));
 
@@ -183,7 +180,6 @@ public class VacancyTests extends TestBase {
     @Description("Simple test")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        Configuration.browser = Browsers.FIREFOX;
         step("Open url 'https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0'", () ->
             open("https://job.ozon.ru/vacancy/?department=Ozon%20Fintech&experience=%D0%9E%D1%82%201%20%D0%B3%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BE%203%20%D0%BB%D0%B5%D1%82&query=%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0"));
 
