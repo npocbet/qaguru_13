@@ -31,8 +31,8 @@ public interface ProjectConfig extends Config {
     @Key("videoStorage")
     String videoStorage();
 
-//    @Key("baseUrl")
-//    String baseUrl();
+    @Key("baseUrl")
+    String baseUrl();
 
     @Key("timeout")
     Integer timeout();
