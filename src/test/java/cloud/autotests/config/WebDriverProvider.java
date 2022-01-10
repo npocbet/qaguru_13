@@ -22,12 +22,17 @@ public class WebDriverProvider implements Supplier<WebDriver> {
 
     @Override
     public WebDriver get() {
+        return null;
+    }
+//
+//    @Override
+//    public WebDriver get() {
 //        WebDriver driver = createWebDriver();
 //        driver.get(config.getBaseUrl());
 //        return driver;
-    }
+//    }
 
-    private WebDriver createWebDriver() {
+//    private WebDriver createWebDriver() {
 //        if (Objects.isNull(config.getRemoteUrl())) {
 //            if (config.getBrowser().equals(Browser.FIREFOX)) {
 //                return new FirefoxDriver();
@@ -39,6 +44,6 @@ public class WebDriverProvider implements Supplier<WebDriver> {
 //            return new RemoteWebDriver(config.getRemoteUrl(), DesiredCapabilities.firefox());
 //        }
 //        throw new NullPointerException("No such browser");
-    }
+//    }
 
 }
