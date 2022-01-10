@@ -32,6 +32,7 @@ public interface ProjectConfig extends Config {
     String videoStorage();
 
     @Key("baseUrl")
+    @DefaultValue("https://job.ozon.ru")
     String baseUrl();
 
     @Key("timeout")
