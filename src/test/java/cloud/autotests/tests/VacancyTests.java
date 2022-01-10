@@ -84,8 +84,10 @@ public class VacancyTests extends TestBase {
             $(".agree .checkbox").click();
             try {
                 $(".button.confirm").click();
+                sleep(2000);
                 while ($$(".modal button").size() != 0){
                     $(".modal button").click();
+
                     $(".button.confirm").click();
                 }
             }
