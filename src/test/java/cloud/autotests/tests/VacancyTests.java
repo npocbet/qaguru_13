@@ -19,9 +19,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VacancyTests extends TestBase {
 
-
-
-
     @Test
     @Description("Test tries to find some QA vacancies on Ozon")
     @DisplayName("Ozon has some QA vacancies")

@@ -15,7 +15,7 @@ public interface ProjectConfig extends Config {
     String browser();
 
     @Key("browserVersion")
-    @DefaultValue("91.0")
+    @DefaultValue("96.0")
     String browserVersion();
 
     @Key("browserSize")
@@ -30,4 +30,10 @@ public interface ProjectConfig extends Config {
 
     @Key("videoStorage")
     String videoStorage();
+
+    @Key("baseUrl")
+    String baseUrl();
+
+    @Key("timeout")
+    Integer timeout();
 }

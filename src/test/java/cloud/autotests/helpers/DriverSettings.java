@@ -14,6 +14,8 @@ public class DriverSettings {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
+        //Configuration.baseUrl = Project.config.baseUrl();
+        Configuration.timeout = Project.config.timeout();
 //        Configuration.baseUrl = App.config.webUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
